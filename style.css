@@ -1,0 +1,229 @@
+:root {
+  --body-text-color:#2c2c2c;
+  --link-color: #ffffff;
+  --background-color: #d7d0c8;
+  --navbar-background-color: #c8c6aa;
+  --normal-font-size: 1rem;
+  --body-header-font-size: 3rem;
+  --nav-height: clamp(2rem, 5vw, 5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: 'Kanit', Kanit-SemiBold;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  color: #2c2c2c;
+  font-size: 1.5rem;
+}
+
+
+nav {
+  background-color: #c8c6aa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  font-size: clamp(0.8rem, 2vw, 2rem);
+}
+
+nav h1 {
+  margin: 0;
+  padding: 0 0 0.5rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+nav .right {
+  display: flex;
+  gap: 1.5rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  margin-right: 4rem;
+}
+
+nav .right a:hover {
+  color: var(--link-color);
+  transition: color 0.3s ease-in-out;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+#home {
+  padding-top: var(--nav-height);
+  text-align: center;
+}
+
+#home h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 4rem;
+}
+
+#home h6 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#home img {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#home .social-icons a{
+  font-size: 4rem;
+  text-decoration: none;
+  color: #030303;
+  transition: color 0.3;
+  margin: 0 0.5rem;
+  gap: 2rem;
+}
+
+/* Unique hover colors */
+#home .social-icons a.linkedin:hover {
+  color: #0077b5; /* LinkedIn blue */
+  transform: scale(1.5); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#home .social-icons a.github:hover {
+  color: #333; /* GitHub black */
+  transform: scale(1.5); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#home .social-icons a.email:hover {
+  color: #d44638; /* Gmail red/orange */
+  transform: scale(1.5); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#home .social-icons a.resume:hover {
+  color: #57d438; 
+  transform: scale(1.5); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+/* icon animation */
+#home .social-icons a.linkedin i:hover {
+  transform: scale(1.2); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#home .social-icons a.github i:hover {
+  transform: scale(1.2); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#home .social-icons a.email i:hover {
+  transform: scale(1.2); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#home .social-icons a.resume i:hover {
+  transform: scale(1.2); /* makes it 50% bigger */
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+#aboutme {
+  text-align: center;
+}
+
+#aboutme .aboutmecontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#aboutme .abtmetext {
+  flex: 1;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+#aboutme .pics {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aligns images to the right */
+  gap: 1rem;
+  transition: transform 0.3s ease;
+  max-width: 80%;
+  height: auto;
+}
+/* non-hover/ locations */
+#aboutme .pics img.plane {
+  transform: translateX(-30rem); /* shifted left */
+}
+
+#aboutme .pics img.vaca {
+  transform: translateY(-20rem); /* shifted up */
+}
+
+#aboutme .pics img.tennis {
+  transform: translateX(-31rem) translateY(-33rem); /* shifted left and up without overwhelming the transform function with two lines */
+}
+
+#aboutme img.mudgirl {
+  transform: translateX(0.2rem) /* shifted right */
+}
+
+
+#skills {
+  text-align: center;
+  padding: 2rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills-left,
+.skills-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.skill-card {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card i {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
